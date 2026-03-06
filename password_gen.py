@@ -9,9 +9,10 @@ num_letters = int(input("How many letters?\n"))
 num_numbers = int(input("How many numbers?\n"))
 num_symbols = int(input("How many symbols?\n"))
 
-password_list = []
-password = ''
+password_list = []  # creating a list for password characters
+password = ''       # final password
 
+# Add the number of characters to the list for each group as specified by the user
 for i in range(num_letters):
     password_list.append(random.choice(letters))
 
@@ -21,9 +22,11 @@ for i in range(num_numbers):
 for i in range(num_symbols):
     password_list.append(random.choice(symbols))
 
-random.shuffle(password_list)
+random.shuffle(password_list)   # Shuffle your characters inside the list
 
+# Concatenate each character to make your password
 for char in password_list:
     password += char
 
 print(f"Your random password is:\n      {password}")
+print("Don't forget to write it down!!!\n")
